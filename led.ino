@@ -24,7 +24,7 @@ int delayAnimasiAwal = 80;
 
 
 // Variabel Led
-// shift 1
+// shift 0
 int merahLed1 = B00000001;
 int hijauLed1 = B00000010;
 int biruLed1  = B00000100;
@@ -33,7 +33,7 @@ int hijauLed2 = B00010000;
 int biruLed2  = B00100000;
 int merahLed3 = B01000000;
 int hijauLed3 = B10000000;
-// shift 2
+// shift 1
 int biruLed3  = B00000001;
 int merahLed4 = B00000010;
 int hijauLed4 = B00000100;
@@ -42,7 +42,7 @@ int merahLed5 = B00010000;
 int hijauLed5 = B00100000;
 int biruLed5  = B01000000;
 int merahLed6 = B10000000;
-// shift 3
+// shift 2
 int hijauLed6 = B00000001;
 int biruLed6  = B00000010;
 int merahLed7 = B00000100;
@@ -51,7 +51,7 @@ int biruLed7  = B00010000;
 int merahLed8 = B00100000;
 int hijauLed8 = B01000000;
 int biruLed8  = B10000000;
-// shift 4
+// shift 3
 int merahLed9 = B00000001;
 int hijauLed9 = B00000010;
 int biruLed9  = B00000100;
@@ -60,7 +60,7 @@ int hijauLed10= B00010000;
 int biruLed10 = B00100000;
 int merahLed11= B01000000;
 int hijauLed11= B10000000;
-// shift 5
+// shift 4
 int biruLed11 = B00000001;
 int merahLed12= B00000010;
 int hijauLed12= B00000100;
@@ -94,6 +94,8 @@ void setup() {
 }
 
 void loop() {
+  // Animasi Geser Start Here
+
   digitalWrite(latchPin, LOW);
   shiftOut(dataPin, clockPin, MSBFIRST, merahLed1);
   digitalWrite(latchPin, HIGH);
@@ -109,74 +111,325 @@ void loop() {
   digitalWrite(latchPin, LOW);
 
 
-  digitalWrite(latchPin2, LOW);
-  shiftOut(dataPin2, clockPin2, MSBFIRST, biruLed3);
-  digitalWrite(latchPin2, HIGH);
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, biruLed3);
+  digitalWrite(latchPin1, HIGH);
   Serial.println("Warna Biru Led 3 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
 
 
-  digitalWrite(latchPin2, LOW);
-  shiftOut(dataPin2, clockPin2, MSBFIRST, merahLed4);
-  digitalWrite(latchPin2, HIGH);
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, merahLed4);
+  digitalWrite(latchPin1, HIGH);
   Serial.println("Warna Merah Led 4 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
 
 
-  digitalWrite(latchPin2, LOW);
-  shiftOut(dataPin2, clockPin2, MSBFIRST, hijauLed5);
-  digitalWrite(latchPin2, HIGH);
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, hijauLed5);
+  digitalWrite(latchPin1, HIGH);
   Serial.println("Warna Hijau Led 5 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
+  digitalWrite(latchPin1, LOW);
+
+
   digitalWrite(latchPin2, LOW);
-
-
-  digitalWrite(latchPin3, LOW);
-  shiftOut(dataPin3, clockPin3, MSBFIRST, biruLed6);
-  digitalWrite(latchPin3, HIGH);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, biruLed6);
+  digitalWrite(latchPin2, HIGH);
   Serial.println("Warna Biru Led 6 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
 
 
-  digitalWrite(latchPin3, LOW);
-  shiftOut(dataPin3, clockPin3, MSBFIRST, merahLed7);
-  digitalWrite(latchPin3, HIGH);
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, merahLed7);
+  digitalWrite(latchPin2, HIGH);
   Serial.println("Warna Merah Led 7 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
 
 
-  digitalWrite(latchPin3, LOW);
-  shiftOut(dataPin3, clockPin3, MSBFIRST, hijauLed8);
-  digitalWrite(latchPin3, HIGH);
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, hijauLed8);
+  digitalWrite(latchPin2, HIGH);
   Serial.println("Warna Hijau Led 8 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
+  digitalWrite(latchPin2, LOW);
 
 
-  digitalWrite(latchPin4, LOW);
-  shiftOut(dataPin4, clockPin4, MSBFIRST, biruLed9);
-  digitalWrite(latchPin4, HIGH);
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, biruLed9);
+  digitalWrite(latchPin3, HIGH);
   Serial.println("Warna Biru Led 9 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
 
 
-  digitalWrite(latchPin4, LOW);
-  shiftOut(dataPin4, clockPin4, MSBFIRST, merahLed10);
-  digitalWrite(latchPin4, HIGH);
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, merahLed10);
+  digitalWrite(latchPin3, HIGH);
   Serial.println("Warna Merah Led 10 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
 
   
-  digitalWrite(latchPin4, LOW);
-  shiftOut(dataPin4, clockPin4, MSBFIRST, hijauLed11);
-  digitalWrite(latchPin4, HIGH);
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, hijauLed11);
+  digitalWrite(latchPin3, HIGH);
   Serial.println("Warna Hijau Led 11 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
+  digitalWrite(latchPin3, LOW);
 
-  digitalWrite(latchPin5, LOW);
-  shiftOut(dataPin5, clockPin5, MSBFIRST, biruLed12);
-  digitalWrite(latchPin5, HIGH);
+
+  digitalWrite(latchPin4, LOW);
+  shiftOut(dataPin4, clockPin4, MSBFIRST, biruLed12);
+  digitalWrite(latchPin4, HIGH);
   Serial.println("Warna Biru Led 12 Animasi Awal Menyala !");
   delay(delayAnimasiAwal);
+  digitalWrite(latchPin4, LOW);
+
+// Animasi Kembali
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, merahLed11);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Merah Led 11 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, hijauLed10);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Hijau Led 10 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, biruLed9);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Biru Led 9 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin3, LOW);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, merahLed8);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Merah Led 8 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, hijauLed7);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Hijau Led 7 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, biruLed6);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Biru Led 6 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin2, LOW);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, merahLed5);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Merah Led 5 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, hijauLed4);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Hijau Led 4 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, biruLed3);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Biru Led 3 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin1, LOW);
+
+
+  digitalWrite(latchPin, LOW);
+  shiftOut(dataPin, clockPin, MSBFIRST, merahLed2);
+  digitalWrite(latchPin, HIGH);
+  Serial.println("Warna Merah Led 2 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin, LOW);
+  shiftOut(dataPin, clockPin, MSBFIRST, hijauLed1);
+  digitalWrite(latchPin, HIGH);
+  Serial.println("Warna Hijau Led 1 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+  // Animasi 1 Selesai, Lanjut Animasi Ke dua
+
+
+  digitalWrite(latchPin, LOW);
+  shiftOut(dataPin, clockPin, MSBFIRST, biruLed2);
+  digitalWrite(latchPin, HIGH);
+  Serial.println("Warna Biru Led 2 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin, LOW);
+  shiftOut(dataPin, clockPin, MSBFIRST, merahLed3);
+  digitalWrite(latchPin, HIGH);
+  Serial.println("Warna Merah Led 3 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin, LOW);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, hijauLed4);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Hijau Led 4 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, biruLed5);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Biru Led 5 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, merahLed6);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Merah Led 6 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin1, LOW);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, hijauLed7);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Hijau Led 7 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, biruLed8);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Biru Led 8 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin2, LOW);
+
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, merahLed9);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Merah Led 9 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, hijauLed10);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Hijau Led 10 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin3, LOW);
+
+  
+  digitalWrite(latchPin4, LOW);
+  shiftOut(dataPin4, clockPin4, MSBFIRST, biruLed11);
+  digitalWrite(latchPin4, HIGH);
+  Serial.println("Warna Biru Led 11 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin4, LOW);
+  shiftOut(dataPin4, clockPin4, MSBFIRST, merahLed12);
+  digitalWrite(latchPin4, HIGH);
+  Serial.println("Warna Merah Led 12 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin4, LOW);
+
+// Animasi Kembali 2
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, merahLed11);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Merah Led 11 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, hijauLed10);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Hijau Led 10 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin3, LOW);
+  shiftOut(dataPin3, clockPin3, MSBFIRST, biruLed9);
+  digitalWrite(latchPin3, HIGH);
+  Serial.println("Warna Biru Led 9 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin3, LOW);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, merahLed8);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Merah Led 8 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, hijauLed7);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Hijau Led 7 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin2, LOW);
+  shiftOut(dataPin2, clockPin2, MSBFIRST, biruLed6);
+  digitalWrite(latchPin2, HIGH);
+  Serial.println("Warna Biru Led 6 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin2, LOW);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, merahLed5);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Merah Led 5 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, hijauLed4);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Hijau Led 4 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin1, LOW);
+  shiftOut(dataPin1, clockPin1, MSBFIRST, biruLed3);
+  digitalWrite(latchPin1, HIGH);
+  Serial.println("Warna Biru Led 3 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin1, LOW);
+
+
+  digitalWrite(latchPin, LOW);
+  shiftOut(dataPin, clockPin, MSBFIRST, merahLed2);
+  digitalWrite(latchPin, HIGH);
+  Serial.println("Warna Merah Led 2 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+
+
+  digitalWrite(latchPin, LOW);
+  shiftOut(dataPin, clockPin, MSBFIRST, hijauLed1);
+  digitalWrite(latchPin, HIGH);
+  Serial.println("Warna Hijau Led 1 Animasi Awal Menyala !");
+  delay(delayAnimasiAwal);
+  digitalWrite(latchPin, LOW);
 }
 
 // Template Shift Register
